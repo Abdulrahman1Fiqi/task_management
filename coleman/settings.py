@@ -27,7 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY', 'f*)$)fay97180m+ti%xi8si##u__h(8%(ipr1z-*lsjbucooz&')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+from environs import Env
+
+env = Env()
+env.read_env()
+
+DEBUG = env.bool("DEBUG", default=False)
 
 # Disable admin
 ADMIN = env.bool('DJANGO_ADMIN', True)
