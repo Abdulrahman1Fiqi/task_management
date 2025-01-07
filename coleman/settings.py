@@ -155,7 +155,7 @@ en_formats.DATE_FORMAT = 'M d, Y'
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = BASE_DIR + '/static/'
+STATIC_ROOT = '/home/abdo47/task_management/static/'
 
 # Whether to enable or not the StaticFilesHandler
 # to serve the static resources from the WSGI
