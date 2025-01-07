@@ -26,12 +26,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = env('SECRET_KEY', 'f*)$)fay97180m+ti%xi8si##u__h(8%(ipr1z-*lsjbucooz&')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG', True)
+DEBUG = False
 
 # Disable admin
 ADMIN = env.bool('DJANGO_ADMIN', True)
 
-ALLOWED_HOSTS = [ '*' ]
+ALLOWED_HOSTS = [ 'abdo47.pythonanywhere.com' ]
 
 
 # Application definition
