@@ -99,9 +99,10 @@ WSGI_APPLICATION = 'coleman.wsgi.application'
 # See more options at https://github.com/kennethreitz/dj-database-url
 #
 DATABASES = {
-    'default': env.dj_db_url('DATABASE_URL',
-                             'sqlite:///%s/db.sqlite3' % BASE_DIR,
-                             conn_max_age=env.int('CONN_MAX_AGE', 600)),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
