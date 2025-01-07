@@ -14,6 +14,20 @@ from django_filters import rest_framework as filters
 from rest_framework.exceptions import ValidationError
 
 
+from django.shortcuts import render
+
+def register(request):
+    return render(request, 'tasks/register.html')
+
+def login(request):
+    return render(request, 'tasks/login.html')
+
+def task_list(request):
+    return render(request, 'tasks/task_list.html')
+
+
+
+
 class TaskFilter(filters.FilterSet):
     status = filters.CharFilter(field_name='status', lookup_expr='exact')
     priority = filters.CharFilter(field_name='priority', lookup_expr='exact')
